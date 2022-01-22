@@ -1,4 +1,4 @@
-#Dice Game
+# Dice Game
 
 A two player game, where each player rolls the dice and the first to get 20 points wins
 
