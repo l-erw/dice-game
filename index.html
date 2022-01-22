@@ -1,0 +1,112 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>🎲 Dice Game 🎲</h1>
+            <h2 id="message"> First to 20 wins</h2>
+            <div class="game">
+                <div id="player1">
+                    <p>Score: <span id="player1Scoreboard">0</span></p>
+                    <div class="dice-area">
+                        <div class="dice-cube">
+                            <div class="dice-face dice-face-1">
+                                <span class="dot dot-centre"></span>
+                            </div>
+                
+                            <div class="dice-face dice-face-2">
+                                <span class="dot dot-left-top"></span>
+                                <span class="dot dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-3">
+                                <span class="dot dot-left-top"></span>
+                                <span class="dot dot-centre"></span>
+                                <span class="dot dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-4">
+                                <span class="dot dot-left-top"></span>
+                                <span class="dot dot-left-bottom"></span>
+                                <span class="dot dot-right-top"></span>
+                                <span class="dot dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-5">
+                                <span class="dot dot-left-top"></span>
+                                <span class="dot dot-left-bottom"></span>
+                                <span class="dot dot-centre"></span>
+                                <span class="dot dot-right-top"></span>
+                                <span class="dot dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-6">
+                                <span class="dot dot-left-top"></span>
+                                <span class="dot dot-left-bottom"></span>
+                                <span class="dot dot-left-middle"></span>
+                                <span class="dot dot-right-top"></span>
+                                <span class="dot dot-right-middle"></span>
+                                <span class="dot dot-right-bottom"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="player2">
+                    <p class="blue-text">Score: <span id="player2Scoreboard">0</span></p>
+                    <div class="dice-area">
+                        <div id="player2Dice" class="dice-cube2">
+                            <div class="dice-face dice-face-1-p2">
+                                <span class="dot dot-p2 dot-centre"></span>
+                            </div>
+                
+                            <div class="dice-face dice-face-2-p2">
+                                <span class="dot dot-p2 dot-left-top"></span>
+                                <span class="dot dot-p2 dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-3-p2">
+                                <span class="dot dot-p2 dot-left-top"></span>
+                                <span class="dot dot-p2 dot-centre"></span>
+                                <span class="dot dot-p2 dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-4-p2">
+                                <span class="dot dot-p2 dot-left-top"></span>
+                                <span class="dot dot-p2 dot-left-bottom"></span>
+                                <span class="dot dot-p2 dot-right-top"></span>
+                                <span class="dot dot-p2 dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-5-p2">
+                                <span class="dot dot-p2 dot-left-top"></span>
+                                <span class="dot dot-p2 dot-left-bottom"></span>
+                                <span class="dot dot-p2 dot-centre"></span>
+                                <span class="dot dot-p2 dot-right-top"></span>
+                                <span class="dot dot-p2 dot-right-bottom"></span>
+                            </div>
+                            
+                            <div class="dice-face dice-face-6-p2">
+                                <span class="dot dot-p2 dot-left-top"></span>
+                                <span class="dot dot-p2 dot-left-bottom"></span>
+                                <span class="dot dot-p2 dot-left-middle"></span>
+                                <span class="dot dot-p2 dot-right-top"></span>
+                                <span class="dot dot-p2 dot-right-middle"></span>
+                                <span class="dot dot-p2 dot-right-bottom"></span>
+                            </div>
+                        </div>
+                    </div>  
+                    </div>
+                </div>
+                
+                <button id="startBtn">START GAME 🏁</button>
+                <button id="rollBtn">ROLL DICE 🎲</button>
+                <button id="resetBtn">RESET GAME 🔁</button>
+            </div>
+        </div>
+        <script src="index.pack.js"></script>
+    </body>
+</html>

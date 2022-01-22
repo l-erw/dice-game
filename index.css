@@ -1,0 +1,248 @@
+html, body {
+    margin: 0;
+    padding: 0;   
+}
+
+body {
+    background-image: linear-gradient(45deg, #ff4828, #2058c7);
+    height: 100vh;
+    font-family: 'Quicksand', serif;
+    color: #ff6200;
+    padding-top: 2em;
+}
+
+h1 {
+    margin: 0;
+    padding-bottom: 0.25em;
+    border-bottom: #ff6200 solid 1px;
+}
+
+h2,
+p {
+    margin-bottom: 0
+}
+
+p {
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-top: 0.25em;
+}
+
+.blue-text {
+    color: #70cbff;
+}
+
+/* grey container */
+.container {
+    background-color: #2e2e2e;
+    margin: 0 auto;
+    padding: 2.5em;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px 4px #333333;
+    text-align: center;   
+}
+
+/* Dice and Score area */
+.game {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+
+/* BUTTONS */
+
+button {
+    border-radius: 3px;
+    border: none;
+    padding: 0.5em 1.1em;
+    font-family: inherit;
+    font-weight: 500;
+    margin: 0.5em auto 0;
+    color: white;
+}
+
+#startBtn {
+    background-color: #e30000;
+}
+
+#rollBtn {
+    background-color: #ff6200;
+    display: none;
+}
+    
+#resetBtn {
+    background-color: #70cbff;
+    color: #000;
+    display: none;
+}
+
+/* DICE */
+
+.dice-area {
+    width: 150px;
+    height: 150px; 
+    margin: 10px;
+    perspective: 600px;
+    border-radius: 5px;
+}
+
+.dice-cube,
+.dice-cube2,
+.dice-face {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.dice-cube,
+.dice-cube2 {
+    position: relative;
+    padding: 25px 25px 0px;
+    transform-style: preserve-3d;
+    transform: translateZ(-50px);
+    transition: transform 0.5s;   
+}
+
+.dice-face {
+    position: absolute;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* PLAYER 1 DICE  - CUBE TRANSFORM */
+
+.dice-cube.show-1 {
+    transform: translateZ(-50px) rotateY(360deg) rotateX(-3deg)
+}
+.dice-cube.show-2 {
+    transform: translateZ(-50px) rotateY(-540deg) rotateX(-3deg)
+}
+.dice-cube.show-3 {
+    transform: translateZ(-50px) rotateY(-450deg) rotateX(-9deg)
+}
+.dice-cube.show-4 {
+    transform: translateZ(-50px) rotateY(450deg) rotateX(3deg)
+}
+.dice-cube.show-5 {
+    transform: translateZ(-50px) rotateX(-450deg) rotateY(6deg)
+}
+.dice-cube.show-6 {
+    transform: translateZ(-50px) rotateX(450deg) rotateY(9deg)
+}
+
+
+/*  PLAYER 1 DICE - FACE TRANSFORM*/
+
+.dice-face-1 {
+    transform: rotateY(360deg) translateZ(50px);
+}
+.dice-face-2 {
+    transform: rotateY(540deg) translateZ(50px);
+}
+.dice-face-3 {
+    transform: rotateY(450deg) translateZ(50px);
+}
+.dice-face-4 {
+    transform: rotateY(-450deg) translateZ(50px);
+}
+.dice-face-5 {
+    transform: rotateX(450deg) translateZ(50px);
+}
+.dice-face-6 {
+    transform: rotateX(-450deg) translateZ(50px);
+}
+
+
+/* PLAYER 2 DICE - CUBE TRANSFORM */
+
+.dice-cube2.display-1 {
+    transform: translateZ(-50px) rotateY(360deg) rotateX(3deg)
+}
+.dice-cube2.display-2 {
+    transform: translateZ(-50px) rotateY(-540deg) rotateX(3deg)
+}
+.dice-cube2.display-3 {
+    transform: translateZ(-50px) rotateY(-450deg) rotateX(9deg)
+}
+.dice-cube2.display-4 {
+    transform: translateZ(-50px) rotateY(450deg) rotateX(-3deg)
+}
+.dice-cube2.display-5 {
+    transform: translateZ(-50px) rotateX(-450deg) rotateY(-6deg)
+}
+.dice-cube2.display-6 {
+    transform: translateZ(-50px) rotateX(450deg) rotateY(-9deg)
+}
+
+
+/* PLAYER 2 DICE - FACE TRANSFORM */
+
+.dice-face-1-p2 {
+    transform: rotateY(360deg) translateZ(50px);
+}
+.dice-face-2-p2 {
+    transform: rotateY(540deg) translateZ(50px);
+}
+.dice-face-3-p2 {
+    transform: rotateY(450deg) translateZ(50px);
+}
+.dice-face-4-p2 {
+    transform: rotateY(-450deg) translateZ(50px);
+}
+.dice-face-5-p2 {
+    transform: rotateX(450deg) translateZ(50px);
+}
+.dice-face-6-p2 {
+    transform: rotateX(-450deg) translateZ(50px);
+}
+
+
+
+/* DOT STYLING ON DICE FACES */
+
+.dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: tomato;
+    margin: 20px;
+    position: absolute;
+    box-shadow: inset 0 0 10px #993625;
+}
+
+.dot-p2 {
+    background-color: #70cbff;
+    box-shadow: inset 0 0 10px #0c2a66
+}
+
+.dot-centre {
+    margin: 38px 0 0 38px;
+}
+
+.dot-left-top {
+    margin: 10px 10px 0 10px;
+}
+
+.dot-right-top {
+    margin: 10px 0 0 65px;
+}
+
+.dot-left-bottom {
+    margin: 65px 10px 0 10px;
+}
+
+.dot-right-bottom {
+   margin: 65px 0px 0px 65px; 
+}
+
+.dot-left-middle {
+   margin: 37px 10px 0 10px;
+}
+
+.dot-right-middle {
+   margin: 37px 10px 0 65px;
+}
