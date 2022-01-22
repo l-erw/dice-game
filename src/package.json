@@ -9,6 +9,6 @@
   },
   "scripts": {
     "watch": "webpack -w",
-    "build": "parcel build src/index.html"
+    "build": "webpack, parcel build src/index.html"
   }
 }
