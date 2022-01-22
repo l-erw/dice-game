@@ -8,7 +8,7 @@
     "babel-preset-react": "*"
   },
   "scripts": {
-    "build": "webpack",
+    // "build": "webpack",
     "watch": "webpack -w",
     "build": "parcel build src/index.html"
   }
